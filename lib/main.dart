@@ -1,8 +1,41 @@
 import 'package:flutter/material.dart';
-import 'package:tbis_tv/view/home_page.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:provider/provider.dart';
+import 'package:tbis_tv/utils/constant.dart';
+import 'package:tbis_tv/view/controllers/menu_app_controller.dart';
+import 'package:tbis_tv/view/customer/bloc/customer_bloc.dart';
+import 'package:tbis_tv/view/home/bloc/home_bloc.dart';
+import 'package:tbis_tv/view/login/bloc/login_bloc.dart';
+import 'package:tbis_tv/view/splash_screen.dart';
+
+import 'flavor.dart';
 
 void main() {
-  runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
+    statusBarColor: Colors.transparent,
+  ));
+  Injector.configure(Flavor.dev);
+  runApp(
+    MultiBlocProvider(
+      providers: [
+        BlocProvider<LoginBloc>(
+          create: (BuildContext context) => LoginBloc(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => MenuAppController(),
+        ),
+        BlocProvider<HomeBloc>(
+          create: (BuildContext context) => HomeBloc(),
+        ),
+        BlocProvider<CustomerBloc>(
+          create: (BuildContext context) => CustomerBloc(),
+        ),
+      ],
+      child: const MyApp(),
+    ),
+  );
 }
 
 class MyApp extends StatelessWidget {
@@ -11,13 +44,16 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      title: 'TBIS',
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: Constants.bgColor,
+        textTheme: const TextTheme().apply(bodyColor: Colors.white),
+        // textTheme: GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)
+        //     .apply(bodyColor: Colors.white),
+        canvasColor: Constants.secondaryColor,
       ),
-      home: const HomePage(),
+      home: const SplashScreen(),
     );
   }
 }

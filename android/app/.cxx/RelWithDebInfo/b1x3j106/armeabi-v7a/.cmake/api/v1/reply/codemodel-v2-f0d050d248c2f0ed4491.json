@@ -1,0 +1,9 @@
+ferencesAsExternallyResolved4'$(MarkPackageReferencesAsExternallyResolved)' == ''+ResolvePackageDependenciesForBuildDependsOnÚ
+      ResolveLockFileReferences;
+      ResolveLockFileAnalyzers;
+      ResolveLockFileCopyLocalFiles;
+      ResolveRuntimePackAssets;
+      RunProduceContentAssets;
+      IncludeTransitiveProjectReferences
+    EnableDefaultItemsEnableDefaultCompileItems"EnableDefaultEmbeddedResourceItemsEnableDefaultNoneItems
+;;**/.*/**DefaultExcludesInProjectFolderP$(DefaultExcludesInProjectFolder);$(DefaultItemExcludesInProjectFolder);**/.*/**TargetLatestRuntimePatch#'$(TargetLatestRuntimePatch)' == ''$VerifyMatchingImplicitPackageVersione'$(TargetFrameworkIdentifier)' == '.NETCoreApp' And '$(DisableImplicitFrameworkReferences

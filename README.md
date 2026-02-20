@@ -4,13 +4,9 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+flutter build apk --flavor cissol -t lib/main_dev.dart --split-per-abi
 
-A few resources to get you started if this is your first Flutter project:
+flutter build apk --flavor uat -t lib/main_uat.dart --split-per-abi
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+flutter build apk --flavor prod -t lib/main_prod.dart --split-per-abi 
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

@@ -1,0 +1,44 @@
+xslt;
+    CompressionIncludePatterns$(CompressionIncludePatterns)î
+      ;
+      **/*.gz;
+      **/*.br;
+      **/*.jpeg;
+      **/*.jpg;
+      **/*.png;
+      **/*.gif;
+      **/*.webp;
+      **/*.woff;
+      **/*.woff2;
+      **/*.m4v;
+      **/*.mov;
+      **/*.movie;
+      **/*.mp2;
+      **/*.mp4;
+      **/*.mp4v;
+      **/*.mpa;
+      **/*.mpe;
+      **/*.mpeg;
+      **/*.mpg;
+      **/*.mpv2;
+      **/*.ogg;
+      **/*.ogv;
+      **/*.webm;
+      **/*.jfif;
+      **/*.svgz;
+      **/*.jpe;
+      **/*.pnz;
+      **/*.aac;
+      **/*.adt;
+      **/*.adts;
+      **/*.m4a;
+      **/*.mp3;
+      **/*.oga;
+      **/*.wax;
+      **/*.wma;
+    CompressionExcludePatterns$(CompressionExcludePatterns);gzipBuildCompressionFormats$(BuildCompressionFormats);gzip;gzip;brotliPublishCompressionFormats($(PublishCompressionFormats);gzip;brotliDisableBuildCompression=
+      GenerateBuildCompressedStaticWebAssets;
+      
+    .ResolveBuildCompressedStaticWebAssetsDependsOnn
+      GenerateBuildCompressedStaticWebAssets;
+      $(ResolveBuildCompressedStaticWebAs

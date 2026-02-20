@@ -1,0 +1,23 @@
+      
+    -ResolvePublishRelatedStaticWebAssetsDependsOnn
+      ResolvePublishCompressedStaticWebAssets;
+      $(ResolvePublishRelatedStaticWebAssetsDependsOn)
+    /GenerateComputedPublishStaticWebAssetsDependsOn8
+      ;
+      StaticWebAssetsPrepareForPublish;
+    8ComputeReferencedStaticWebAssetsPublishManifestDependsOns
+      $(ComputeReferencedStaticWebAssetsPublishManifestDependsOn);
+      StaticWebAssetsPrepareForPublish;
+    DStaticWebAssetsPrepareForPublish;LoadStaticWebAssetsPublishManifest;.CopyStaticWebAssetsToPublishDirectoryDependsOnuStaticWebAssetsPrepareForPublish;LoadStaticWebAssetsPublishManifest;$(CopyStaticWebAssetsToPublishDirectoryDependsOn)g
+      Build;
+      ResolveStaticWebAssetsConfiguration;LoadStaticWebAssetsBuildManifest
+    ;
+    (IncludeStaticWebAssetsPackItemsDependsOn@
+      Build;$(IncludeStaticWebAssetsPackItemsDependsOn);
+    p
+    ;
+    UpdateLegacyPackageScopedCssBundles;
+    GenerateScopedCssFiles;
+    ResolveBundledCssAssets;
+  ResolveScopedCssAssetsDependsOn’
+    $(ResolveScopedCssAssetsDependsOn
